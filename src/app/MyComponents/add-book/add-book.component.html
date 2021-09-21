@@ -1,0 +1,40 @@
+<form  ngNativeValidate #addBookForm="ngForm" (ngSubmit)="addBookFormSubmit()  ;addBookForm.reset();  ">
+   
+    <div class="container">
+        <div class="card">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1>BOOKS STORE</h1>
+            <label>{{msg}}</label>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary" routerLink='/addbook' routerLinkActive='active'>Add Book</button>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary" routerLink='/getbook' routerLinkActive='active'>Get Book</button>
+        </div>
+      </div>
+    
+      
+      
+
+
+    <label >Title</label><br>
+    <input type="text" class="form-control" placeholder="Title" name="Title"  required [(ngModel)]='book.title'><br>
+    <label>Author</label><br>
+    <input type="text" class="form-control" placeholder="Author" name="Author" required [(ngModel)]='book.author'><br>
+    <div class="row">
+        <div class="col">
+            <label>Price</label><br>
+            <input type="number" min="0" class="form-control" placeholder="Price" name="Price"  [(ngModel)]="book.price" required><br>
+        </div>
+        <div class="col">
+            <label>Publish date</label><br>
+            <input type="date" name="publishdate" required [(ngModel)]="book.date" ><br>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  
+    </div>
+    </div>
+</form>
